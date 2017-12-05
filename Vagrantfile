@@ -62,9 +62,20 @@ Vagrant.configure("2") do |config|
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
+  # documentation for more information bout their specific syntax and use.
   # config.vm.provision "shell", inline: <<-SHELL
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+
+  config.vm.provision "shell", inline: <<-SHELL
+       apt-get -y -q update
+       apt-get -y -q upgrade
+       apt-get -y -q install software-properties-common htop
+       add-apt-repository ppa:webupd8team/java
+       apt-get -y -q update
+       echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+       apt-get -y -q install oracle-java8-installer
+       update-java-alternatives -s java-8-oracle
+  SHELL
 end
