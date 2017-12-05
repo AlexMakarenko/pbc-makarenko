@@ -4,9 +4,9 @@ from fibonacci import get_fibonacci_sequence
 
 cases = [
     {
-        "Case": "Get fibonacci sequence up to 15.",
-        "input": 15,
-        "expected": [0, 1, 1, 2, 3, 5, 8, 13]
+        "Case": "Get fibonacci sequence up to 7.",
+        "input": 7,
+        "expected": [0, 1, 1, 2, 3, 5, 8]
     },
     {
         "Case": "Input number is 0.",

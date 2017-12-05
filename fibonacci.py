@@ -3,7 +3,7 @@
 def get_fibonacci_sequence(n):
     a, b = 0, 1
     result = []
-    while a < n:
+    while len(result) < n:
         result.append(a)
         a, b = b, a+b
     return result
