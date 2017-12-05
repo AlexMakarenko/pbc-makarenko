@@ -6,7 +6,5 @@ def fibonacci_sequence(n):
     while a < n:
         result.append(a)
         a, b = b, a+b
-    print(result)
+    return result, print(result)
 
-
-fibonacci_sequence(1000)
