@@ -4,13 +4,13 @@
 
 ## Day 1
 
-#### *fibonacci.py*
+### *fibonacci.py*
 To get fibonacci sequence run function fibonacci_sequence(n), where n is a size of sequence. Out is a list of numbers.
 
-#### *numbers.py* 
+### *numbers.py* 
 To get pairs of numbers from 1 to 10 which sum is 10 run get_pairs_of_numbers(). Out is a set of pairs.
 
-#### *Vagrantfile*
+### *Vagrantfile*
 Is a config for virtual machine `ubuntu/trusty64`.
 * To up virtual machine you need to have vagrant == latest version, and VirtualBox <= 5.1 version.
 * Run `vagrant up` in terminal.
@@ -18,7 +18,7 @@ Is a config for virtual machine `ubuntu/trusty64`.
 
 ## Day 2
 
-#### *Virtual environment*
+### *Virtual environment*
 
 Before running this project you need to set up a virtual environment. 
 You need to have a latest python version. 
@@ -28,7 +28,7 @@ If you want to do it manually, follow these steps:
 * `source venv/bin/activate` to activate virtual environment
 * `pip install -r requirements.txt` to install packages from requirements.txt
 
-#### *Unit tests*
+### *Unit tests*
 
 To run unit tests you need to have already set up virtual environment.
 * for fibonacci tests run `pytest test_fibonacci.py`
