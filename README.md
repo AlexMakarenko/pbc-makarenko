@@ -33,3 +33,5 @@ If you want to do it manually, follow these steps:
 To run unit tests you need to have already set up virtual environment.
 * for fibonacci tests run `pytest test_fibonacci.py`
 * for numbers tests run `pytest test_numbers.py`
+
+## Day 3
