@@ -38,7 +38,7 @@ To run unit tests you need to have already set up virtual environment.
 
 ### 1. *Structurize project*
 
-Project's structure was changed dua to dev convenctions for python devs.
+Project's structure was changed due to dev convenctions for python devs.
 
 ### 2. *Use 'parametrize'*
 
@@ -46,22 +46,22 @@ All unit tests became parametrized due to similar tests logic.
 
 ### 3. *Configure markers*
 
-Also, tests were marked with pytest markers and now you can user:
+Also, tests were marked with pytest markers and now you can use:
 
-`pytest -v -m fib` To run tests for `fibonacci_app`.
-`pytest -v -m numbers` To run tests for `numbers_app`.
+* `pytest -v -m fib` To run tests for `fibonacci_app`.
+* `pytest -v -m numbers` To run tests for `numbers_app`.
 
 ### 4. *Use CLI config for your tow programs*
 
 So far, `fibonacci` and `numbers` were just functions, 
-but now they all real programs. You can try them using commands in the terminal.
+but now they are real programs. You can try them using commands in the terminal.
 
 *for `apps/fibonacci_app/`*
 * run `python app.py -l 7` Where 7 is a desired length of the fibonacci sequence.
 Output will be: `[0, 1, 1, 2, 3, 5, 8]`
 
 *for `apps/numbers_app/`*
-* run `python app.py -n 1 2 3 4 5 6 7 8 9` Where `1 2 3 4 5 6 7 8 9` are numbers need to be parsed.
+* run `python app.py -n 1 2 3 4 5 6 7 8 9` Where `1 2 3 4 5 6 7 8 9` are numbers needed to be parsed.
 Output will be: `([(5, 5), (2, 8), (4, 6), (1, 9), (3, 7)])`
 
 ### 5. *Decorator*
