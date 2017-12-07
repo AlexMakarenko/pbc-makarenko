@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Create a virtual environment
-python3 -m venv venv
+virtualenv venv
 # Activate virtual environment
 source venv/bin/activate
 # Install packages from requirements.txt

@@ -21,10 +21,10 @@ Is a config for virtual machine `ubuntu/trusty64`.
 ### *Virtual environment*
 
 Before running this project you need to set up a virtual environment. 
-You need to have a latest python version. 
+You need to have python 2.7 version. 
 Then you can just run bash script from file `setup_virtualenv.sh` using command `sh setup_virtualenv.sh`
 If you want to do it manually, follow these steps:
-* `python3 -m venv venv` To create a virtual environment
+* `python virtualenv venv` To create a virtual environment
 * `source venv/bin/activate` to activate virtual environment
 * `pip install -r requirements.txt` to install packages from requirements.txt
 
