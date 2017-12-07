@@ -14,20 +14,18 @@ def log(func):
 
 
 @log
-def get_pairs_of_numbers(n):
-    if type(n) is int and n>0:
-        lst = range(1, n)
-        result = set([tuple(sorted([x, 10 - x])) for i in lst for x in lst if x + i == 10])
-        print('Result: {}'.format(result))
-        return result
-    else:
-        print('Input type must be int > 0.')
-        return []
+def get_pairs_of_numbers(*args):
+    lst = [el for el in args if type(el) is int or type(el) is float]
+    result = set([tuple(sorted([x, i])) for i in lst for x in lst if x + i == 10])
+    print('Result: {}'.format(result))
+    return result
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="This app returns pairs of numbers where sum is ten.")
     group = parser.add_argument_group("Parameters")
-    group.add_argument("--length", "-l", action='store', help="Length of set of numbers.", type=int, required=True)
+    group.add_argument("--numbers", "-n", action='store', nargs='+', help="Enter numbers separated by a space.",
+                       type=int,
+                       required=True)
     args = parser.parse_args()
-    get_pairs_of_numbers(args.length)
+    get_pairs_of_numbers(*args.numbers)
