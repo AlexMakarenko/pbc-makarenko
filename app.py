@@ -14,6 +14,6 @@ if __name__ == '__main__':
                        required=False)
     args = parser.parse_args()
     if args.app == 'fib':
-        print(get_fibonacci_sequence(args.length))
+        print(str(get_fibonacci_sequence(args.length)).strip('[]'))
     elif args.app == 'pairs':
         print(str(get_pairs_of_numbers(*args.numbers)).strip('[]'))
