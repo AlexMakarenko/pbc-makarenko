@@ -57,7 +57,7 @@ Also, tests were marked with pytest markers and now you can use:
 run `python app.py --app fib -l 7` Where 7 is a desired length of the fibonacci sequence.
 Output will be: 0, 1, 1, 2, 3, 5, 8
 
-#   for /pairs_of_numbers
+#   for pairs_of_numbers
 run `python app.py --app pairs -n 1 2 3 4 5 6 7 8 9` Where `1 2 3 4 5 6 7 8 9` are numbers needed to be parsed.
 Output will be: (5, 5), (2, 8), (4, 6), (1, 9), (3, 7)
 ```
