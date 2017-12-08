@@ -1,5 +1,5 @@
 import pytest
-from apps.numbers_app.app import get_pairs_of_numbers
+from apps.numbers_app.pairs_of_numbers import get_pairs_of_numbers
 
 test_data = [
     pytest.param((1, 2, 3, 4, 5, 6, 7, 8, 9), 5, id='Positive test. Input is from 1 to 10.'),
@@ -13,5 +13,4 @@ test_data = [
 @pytest.mark.parametrize('input, expected', test_data)
 @pytest.mark.numbers
 def test_get_pairs_of_numbers(input, expected):
-    actual = get_pairs_of_numbers(*input)
-    assert len(actual) == expected
+    assert len(get_pairs_of_numbers(*input)) == expected
