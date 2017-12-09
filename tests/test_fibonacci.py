@@ -10,5 +10,6 @@ test_data = [
 
 @pytest.mark.parametrize('input, expected', test_data)
 @pytest.mark.fib
-def test_get_fibonacci_sequence(input, expected):
+def test_get_fibonacci_sequence(setup_fixture, input, expected):
+    assert len(setup_fixture) == 2
     assert get_fibonacci_sequence(input) == expected

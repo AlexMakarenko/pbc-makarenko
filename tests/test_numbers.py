@@ -12,5 +12,6 @@ test_data = [
 
 @pytest.mark.parametrize('input, expected', test_data)
 @pytest.mark.numbers
-def test_get_pairs_of_numbers(input, expected):
+def test_get_pairs_of_numbers(setup_fixture, input, expected):
+    assert len(setup_fixture) == 2
     assert len(get_pairs_of_numbers(*input)) == expected

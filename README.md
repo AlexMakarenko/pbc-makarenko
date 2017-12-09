@@ -4,10 +4,10 @@
 
 ## Day 1
 
-### *fibonacci.py*
-To get fibonacci sequence run `fibonacci_sequence(n)`, where n is a size of sequence. Out is a list of numbers.
+### *fibonacci_app.py*
+To get fibonacci sequence run `get_fibonacci_sequence(n)`, where n is a size of sequence. Out is a list of numbers.
 
-### *numbers.py* 
+### *numbers_app.py* 
 To get pairs of numbers from 1 to 10 which sum is 10 run `get_pairs_of_numbers()`. Out is a set of pairs.
 
 ### *Vagrantfile*
@@ -65,3 +65,8 @@ Output will be: (5, 5), (2, 8), (4, 6), (1, 9), (3, 7)
 
 Both apps are using decorator `@log` for printing information needed for debugging in format `get_pairs_of_numbers(1, 2, 3, 4, 5, 6, 7, 8, 9)
 `
+
+## Day 5
+
+Added fixture which installs Selenium grid on Vagrant box using Python, pytest and paramiko before running tests.
+To check run: `pytest -s -v tests`.
