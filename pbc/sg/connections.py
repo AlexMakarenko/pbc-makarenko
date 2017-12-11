@@ -20,10 +20,11 @@ class SshClient:
         result = []
         if self._client:
             stdin, stdout, stderr = self._client.exec_command(command)
-            for row in stdout:
-                # print(row)
-                result.append(str(row))
-            return result
+            while not stdout.channel.exit_status_ready():
+                # Print data when available
+                for row in stdout:
+                    result.append(str(row))
+                return result
         else:
             print("...Connection not opened.")
 
