@@ -1,2 +1,0 @@
-from apps.fibonacci_app.fibonacci import get_fibonacci_sequence
-from apps.numbers_app.pairs_of_numbers import get_pairs_of_numbers

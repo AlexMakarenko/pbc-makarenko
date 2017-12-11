@@ -1,5 +1,5 @@
 import pytest
-from apps.fibonacci_app.fibonacci import get_fibonacci_sequence
+from pbc.apps.fibonacci import get_fibonacci_sequence
 
 test_data = [
     pytest.param(7, [0, 1, 1, 2, 3, 5, 8], id='Get fibonacci sequence up to 7.'),
@@ -10,6 +10,5 @@ test_data = [
 
 @pytest.mark.parametrize('input, expected', test_data)
 @pytest.mark.fib
-def test_get_fibonacci_sequence(setup_fixture, input, expected):
-    assert len(setup_fixture) == 2
+def test_get_fibonacci_sequence(input, expected):
     assert get_fibonacci_sequence(input) == expected

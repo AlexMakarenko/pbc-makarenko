@@ -70,3 +70,7 @@ Both apps are using decorator `@log` for printing information needed for debuggi
 
 Added fixture which installs Selenium grid on Vagrant box using Python, pytest and paramiko before running tests.
 To check run: `pytest -s -v tests`.
+
+## Day 6
+
+Run `pytest pbc` to check selenium grid.

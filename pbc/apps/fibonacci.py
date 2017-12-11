@@ -1,4 +1,4 @@
-from apps.logger import log
+from pbc.func_decorators import log
 
 
 @log

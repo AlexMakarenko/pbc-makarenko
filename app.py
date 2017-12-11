@@ -1,7 +1,7 @@
 # ./app.py
 import argparse
-from apps import get_fibonacci_sequence
-from apps import get_pairs_of_numbers
+from pbc import get_fibonacci_sequence
+from pbc import get_pairs_of_numbers
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="This app can return the fibonacci sequence of required length and"
