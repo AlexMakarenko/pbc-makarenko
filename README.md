@@ -77,4 +77,4 @@ Run `pytest pbc` to check selenium grid.
 
 ## Day 7
 
-Added Selemium test for Grid.
+Added Selenium test for Grid.
