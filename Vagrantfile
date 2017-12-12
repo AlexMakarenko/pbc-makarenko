@@ -70,13 +70,18 @@ Vagrant.configure("2") do |config|
   # SHELL
 
   config.vm.provision "shell", inline: <<-SHELL
-       apt-get -y -q update
-       apt-get -y -q upgrade
-       apt-get -y -q install software-properties-common htop
-       add-apt-repository ppa:webupd8team/java
-       apt-get -y -q update
-       echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-       apt-get -y -q install oracle-java8-installer
-       update-java-alternatives -s java-8-oracle
+    apt-get -y -q update
+    apt-get -y -q upgrade
+    apt-get -y -q install software-properties-common htop
+    add-apt-repository ppa:webupd8team/java
+    apt-get -y -q update
+    echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+    apt-get -y -q install oracle-java8-installer
+    update-java-alternatives -s java-8-oracle
+    add-apt-repository ppa:mozillateam/firefox-next
+    apt-get -y install firefox
+    wget https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz
+    tar -xvzf geckodriver*
+    mv geckodriver /usr/local/sbin
   SHELL
 end

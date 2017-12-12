@@ -74,3 +74,7 @@ To check run: `pytest -s -v tests`.
 ## Day 6
 
 Run `pytest pbc` to check selenium grid.
+
+## Day 7
+
+Added Selemium test for Grid.
