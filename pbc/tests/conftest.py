@@ -14,7 +14,7 @@ def grid(request):
     grid.add_node()
     sleep(5)
     def fin():
-        # cl.execute('rm log.txt')
-        # cl.execute('killall java')
+        cl.execute('rm log.txt')
+        cl.execute('killall java')
         cl.close()
     request.addfinalizer(fin)
