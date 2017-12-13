@@ -42,12 +42,4 @@ class Grid(BaseGrid):
         return True if 'yes' in str(result) else False
 
 
-class StartGrid(Grid):
-    def __init__(self, ssh_client):
-        super(Grid, self).__init__()
-        self._client = ssh_client
-        self.download()
-        self.start_hub()
-        self.add_node()
-
 
