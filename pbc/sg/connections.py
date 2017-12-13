@@ -20,8 +20,7 @@ class SshClient:
         stdin, stdout, stderr = self._client.exec_command(command)
         while not stdout.channel.exit_status_ready():
             # Print data when available
-            return stdout.readlines()
-
+            return stdout.read().splitlines()
 
 
     def close(self):

@@ -4,3 +4,7 @@
 .idea/*
 /pbc/sg/geckodriver.log
 /geckodriver.log
+/pbc/tests/python.png
+/pbc/tests/pycon.png
+/python.png
+/pycon.png

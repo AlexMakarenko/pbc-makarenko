@@ -22,7 +22,7 @@ class Grid(BaseGrid):
         self._client = ssh_client
 
     def download(self):
-        if not self.is_file_downloaded():
+        if 'selenium-server-standalone-3.8.0.jar' not in self.files_in_dir():
             print '...Downloading selenium grid.'
             self._client.execute('wget -O selenium-server-standalone-3.8.0.jar https://goo.gl/SVuU9X')
 
@@ -37,9 +37,9 @@ class Grid(BaseGrid):
         self._client.execute(
             'java -jar selenium-server-standalone-3.8.0.jar -role node  -nodeConfig sg-node.json >> log.txt 2>&1 &')
 
-    def is_file_downloaded(self):
-        result = self._client.execute('test -f "selenium-server-standalone-3.8.0.jar" && echo yes')
-        return True if 'yes' in str(result) else False
+    def files_in_dir(self):
+        print(self._client.execute('ls'))
+        return self._client.execute('ls')
 
 
 

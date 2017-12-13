@@ -78,3 +78,9 @@ Run `pytest pbc` to check selenium grid.
 ## Day 7
 
 Added Selenium test for Grid.
+
+## Day 8
+
+Added Rest test for Selenium Grid. 
+Added UI test for remote webdriver.
+To run all tests use `pytest -s -v`
